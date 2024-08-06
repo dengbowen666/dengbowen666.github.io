@@ -1,24 +1,62 @@
 import { defineUserConfig } from "vuepress";
-
+//搜索框
+import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
-
+  base: "/MyVuePressWeb/",
+  
   locales: {
     "/": {
       lang: "en-US",
-      title: "Blog Demo",
+      title: "Mr.Deng Blog",
       description: "A blog demo for vuepress-theme-hope",
     },
-    "/zh/": {
+    /*"/zh/": {
       lang: "zh-CN",
-      title: "博客演示",
+      title: "Mr.Deng的博客",
       description: "vuepress-theme-hope 的博客演示",
-    },
+    },*/
   },
 
   theme,
+
+  plugins: [
+    searchProPlugin({
+      // 索引全部内容
+      indexContent: true,
+      // 为分类和标签添加索引
+      customFields: [
+        {
+          getter: (page) => page.frontmatter.category as any,
+          formatter: "分类：$content",
+        },
+        {
+          getter: (page) => page.frontmatter.tag as any,
+          formatter: "标签：$content",
+        },
+      ],
+    }),
+  ],
+
+   head: [
+    // ...
+
+    // 导入相应链接
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    [
+      "link",
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+    ],
+    [
+      "link",
+      {
+        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap",
+        rel: "stylesheet",
+      },
+    ],
+  ],
+
 
   // Enable it with pwa
   // shouldPrefetch: false,

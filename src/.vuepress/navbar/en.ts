@@ -44,9 +44,59 @@ export const enNavbar = navbar([
       "strawberry",
     ],
   },
-  {
-    text: "V2 Docs",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/",
+  
+{
+    text: "学习",
+    children: [
+      {
+        text: "教程",
+        children: [
+          { text: "Markdown 介绍", link: "/Markdown 介绍" },
+          { text: "Vuepress", link: "/Vuepress" },
+             {
+       text: "V2 Docs",
+       icon: "book",
+       link: "https://theme-hope.vuejs.press/",
   },
+        ],
+      },
+      {
+        text: "项目",
+        children: [
+          { text: "变更日志", link: "/变更日志" },
+          { text: "迁移指南", link: "/迁移指南" },
+        ],
+      },
+   
+    ],
+  },
+
+  {
+    text: "游戏",
+    children: [
+      {
+        text: "教程",
+        children: [
+          { text: "Markdown 介绍", link: "/Markdown 介绍" },
+          { text: "Vuepress", link: "/Vuepress" },
+             {
+       text: "V2 Docs",
+       icon: "book",
+       link: "https://theme-hope.vuejs.press/",
+  },
+        ],
+      },
+      {
+        text: "项目",
+        children: [
+          { text: "变更日志", link: "/变更日志" },
+          { text: "迁移指南", link: "/迁移指南" },
+        ],
+      },
+   
+    ],
+  },
+
+
+
 ]);
