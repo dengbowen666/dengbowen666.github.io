@@ -41,8 +41,10 @@ export const enNavbar = navbar([
        
         prefix: "小站日志/",
         children: [
-         
-         
+          {
+            text: "网站更新",
+            link:"1",
+          }
         ],
       },
        {

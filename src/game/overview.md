@@ -3,9 +3,9 @@ cover: /assets/images/R.jpg
 icon: pen-to-square
 date: 2024-08-07
 category:
-  - guide
+  - 导航
 tag:
-  - game
+  - 游戏
 star: true
 sticky: true
 ---

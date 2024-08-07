@@ -4,5 +4,5 @@ export const enSidebar = sidebar({
   "/game/": "structure",
   "/posts/": "structure",
   "/study/": "structure",
-  "/demo/": "structure",
+  "/tools/": "structure",
 });
