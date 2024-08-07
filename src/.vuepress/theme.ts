@@ -8,12 +8,12 @@ export default hopeTheme({
 
   author: {
     name: "Mr.Deng",
-    url: "https://mister-hope.com",
+    url: "https://dengbowen666.github.io",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "/logo.png",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
@@ -72,7 +72,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "A FrontEnd programmer",
+        description: "一个前端热爱者",
         intro: "/intro.html",
       },
 

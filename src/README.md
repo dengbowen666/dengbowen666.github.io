@@ -8,6 +8,7 @@ heroText: 欢迎来到为拉妮变成狼人模样的个人博客
 tagline: 
 heroFullScreen: true
 date: 2024-08-06
+bgImage: 
 projects:
   - icon: project
     name: 尚品汇商城项目
