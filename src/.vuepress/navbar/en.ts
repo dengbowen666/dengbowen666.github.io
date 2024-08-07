@@ -4,7 +4,7 @@ export const enNavbar = navbar([
   "/",
 
   {
-    text: "我的博客",
+    text: "随笔-博文",
     icon: "pen-to-square",
     prefix: "/posts/",
     children: [
@@ -12,27 +12,18 @@ export const enNavbar = navbar([
         text: "css",
         icon: "pen-to-square",
         prefix: "css/",
-        children: [
-          { text: "Apple1", icon: "pen-to-square", link: "1" },
-          { text: "Apple2", icon: "pen-to-square", link: "2" },
-         
-        ],
+        children: [{
+          text: "css,启动！",
+          icon: "pen-to-square",
+          link: "css,启动！",
+        } ],
       },
       {
         text: "vue",
         icon: "vue",
         prefix: "vue/",
         children: [
-          {
-            text: "Banana 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "Banana 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
+         
          
         ],
       },
@@ -41,16 +32,25 @@ export const enNavbar = navbar([
         icon: "vuepress",
         prefix: "vuepress/",
         children: [
-          {
-            text: "Banana 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "Banana 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
+         
+         
+        ],
+      },
+      {
+        text: "小站日志",
+       
+        prefix: "小站日志/",
+        children: [
+         
+         
+        ],
+      },
+       {
+        text: "道",
+       
+        prefix: "vuepress/",
+        children: [
+         
          
         ],
       },
@@ -59,6 +59,7 @@ export const enNavbar = navbar([
   
   "/study/",
   "/game/",
+  "/tools/",
   "/intro.md",
-
+   
 ]);
