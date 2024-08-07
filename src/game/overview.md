@@ -1,17 +1,16 @@
 ---
-cover: /assets/images/cover2.jpg
+cover: /assets/images/R.jpg
 icon: pen-to-square
-date: 2022-01-12
+date: 2024-08-07
 category:
-  - Vegetable
+  - guide
 tag:
-  - red
-  - round
+  - game
 star: true
 sticky: true
 ---
 
-# Tomato
+# 游戏总览
 
 ## Heading 2
 

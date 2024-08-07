@@ -4,58 +4,32 @@ import { enNavbar} from "./navbar/index.js";
 import { enSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://dengbowen666.github.io",
+  hostname: "https://github.com/dengbowen666/MyVuePressWeb",
 
   author: {
-    name: "Mr.Deng",
-    url: "https://dengbowen666.github.io",
+    name: "Dr.Deng",
+    url: "https://github.com/dengbowen666/MyVuePressWeb",
   },
 
   iconAssets: "fontawesome-with-brands",
 
   logo: "/logo.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "https://github.com/dengbowen666/MyVuePressWeb",
 
   docsDir: "src",
 
   blog: {
     medias: {
-      Baidu: "https://example.com",
-      BiliBili: "https://example.com",
-      Bitbucket: "https://example.com",
-      Dingding: "https://example.com",
-      Discord: "https://example.com",
-      Dribbble: "https://example.com",
+      BiliBili: "https://space.bilibili.com/446703056?spm_id_from=333.1007.0.0",
       Email: "mailto:info@example.com",
-      Evernote: "https://example.com",
-      Facebook: "https://example.com",
-      Flipboard: "https://example.com",
-      Gitee: "https://example.com",
-      GitHub: "https://example.com",
-      Gitlab: "https://example.com",
-      Gmail: "mailto:info@example.com",
-      Instagram: "https://example.com",
-      Lark: "https://example.com",
-      Lines: "https://example.com",
-      Linkedin: "https://example.com",
-      Pinterest: "https://example.com",
-      Pocket: "https://example.com",
+      
+      GitHub: "https://github.com/dengbowen666/MyVuePressWeb",
       QQ: "https://example.com",
-      Qzone: "https://example.com",
-      Reddit: "https://example.com",
-      Rss: "https://example.com",
       Steam: "https://example.com",
       Twitter: "https://example.com",
-      Wechat: "https://example.com",
-      Weibo: "https://example.com",
-      Whatsapp: "https://example.com",
       Youtube: "https://example.com",
       Zhihu: "https://example.com",
-      VuePressThemeHope: {
-        icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-        link: "https://theme-hope.vuejs.press",
-      },
     },
   },
 
@@ -67,18 +41,18 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "Default footer",
+      footer: "为拉妮变成狼人模样",
 
       displayFooter: true,
 
       blog: {
-        description: "一个前端热爱者",
+        description: "一个热爱前端的萌新",
         intro: "/intro.html",
       },
 
-      metaLocales: {
+   /*   metaLocales: {
         editLink: "Edit this page on GitHub",
-      },
+      },*/
     },
 
     /**
@@ -89,7 +63,7 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
-      "/zh/demo/encrypt.html": ["1234"],
+      
     },
   },
 
@@ -98,7 +72,6 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
-
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
     // You MUST generate and use your own comment service in production.
@@ -240,4 +213,6 @@ export default hopeTheme({
     //   },
     // },
   },
+
+  
 });

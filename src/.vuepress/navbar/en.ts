@@ -2,7 +2,7 @@ import { navbar } from "vuepress-theme-hope";
 
 export const enNavbar = navbar([
   "/",
-  "/demo/",
+
   {
     text: "我的博客",
     icon: "pen-to-square",
@@ -20,7 +20,7 @@ export const enNavbar = navbar([
       },
       {
         text: "vue",
-        icon: "pen-to-square",
+        icon: "vue",
         prefix: "vue/",
         children: [
           {
@@ -38,7 +38,7 @@ export const enNavbar = navbar([
       },
       {
         text: "vuepress",
-        icon: "pen-to-square",
+        icon: "vuepress",
         prefix: "vuepress/",
         children: [
           {
@@ -57,56 +57,8 @@ export const enNavbar = navbar([
     ],
   },
   
-{
-    text: "学习",
-    children: [
-      {
-        text: "教程",
-        children: [
-             {
-       text: "V2 Docs",
-       icon: "book",
-       link: "https://theme-hope.vuejs.press/",
-  },
-        ],
-      },
-      {
-        text: "项目",
-
-        children: [
-         
-        ],
-      },
-   
-    ],
-  },
-
-  {
-    text: "图书",
-    children: [
-      {
-        text: "教程",
-        children: [
-          { text: "Markdown 介绍", link: "/Markdown 介绍" },
-          { text: "Vuepress", link: "/Vuepress" },
-             {
-       text: "V2 Docs",
-       icon: "book",
-       link: "https://theme-hope.vuejs.press/",
-  },
-        ],
-      },
-      {
-        text: "项目",
-        children: [
-          { text: "变更日志", link: "/变更日志" },
-          { text: "迁移指南", link: "/迁移指南" },
-        ],
-      },
-   
-    ],
-  },
-  "/game/"
-
+  "/study/",
+  "/game/",
+  "/intro.md",
 
 ]);
