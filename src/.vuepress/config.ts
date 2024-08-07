@@ -6,7 +6,6 @@ import theme from "./theme.js";
 //自动注册组件
 import registerComponentsPlugin from"@vuepress/plugin-register-components"
 
-const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   base: "/MyVuePressWeb/",
   
@@ -64,12 +63,7 @@ export default defineUserConfig({
       },
     ],
   ],
-  alias: {
-    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
-      __dirname,
-      "./components/BlogHero.vue",
-    ),
-  },
+ 
 
   // Enable it with pwa
   // shouldPrefetch: false,
