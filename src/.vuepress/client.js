@@ -1,22 +1,21 @@
 import { defineClientConfig } from "vuepress/client";
 /*import { setupSnowFall } from "vuepress-theme-hope/presets/setupSnowFall.js";*/
-//为项目主页的特性添加闪光效果。
-import "vuepress-theme-hope/presets/shinning-feature-panel.scss"
+import "vuepress-theme-hope/presets/left-blog-info.scss"
+//: 将博主信息移动至文章列表的左侧。
+
 //为页面图标添加鼠标悬停的跳动效果。
 import "vuepress-theme-hope/presets/bounce-icon.scss"
-/*export default defineClientConfig({
-  setup() {
-    setupSnowFall();
-  },
-});*/
+
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js"
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-
-
+//import BlogHero from './components/BlogHero.vue'
 export default defineClientConfig({
+  layouts: {
+    //BlogHero,
+  },
   setup: () => {
     setupTransparentNavbar({ type: "homepage" });
     setupRunningTimeFooter(
@@ -32,6 +31,7 @@ export default defineClientConfig({
   enhance({ app }) {
     // 注册element-plus
     app.use(ElementPlus)
-  
+    //app.component("BlogHero",BlogHero)
   },
+  
 });
