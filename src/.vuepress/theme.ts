@@ -9,8 +9,9 @@ export default hopeTheme({
   author: {
     name: "Dr.Deng",
     url: "https://github.com/dengbowen666/MyVuePressWeb",
+    email: " 2763201730@qq.com"
   },
-
+  favicon:"src/.vuepress/public/favicon.ico",
   iconAssets: "fontawesome-with-brands",
 
   logo: "/logo.png",
@@ -31,13 +32,14 @@ export default hopeTheme({
       Youtube: "https://example.com",
       Zhihu: "https://example.com",
     },
+    
   },
 
   locales: {
     "/": {
       // navbar
       navbar: enNavbar,
-
+      navbarAutoHide:"always",
       // sidebar
       sidebar: enSidebar,
 
@@ -48,6 +50,7 @@ export default hopeTheme({
       blog: {
         description: "一个热爱前端的萌新",
         intro: "/intro.html",
+        sidebarDisplay:"mobile"
       },
 
    /*   metaLocales: {
@@ -75,10 +78,10 @@ export default hopeTheme({
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
     // You MUST generate and use your own comment service in production.
-    // comment: {
-    //   provider: "Waline",
-    //   serverURL: "https://waline-comment.vuejs.press",
-    // },
+     comment: {
+     provider: "Waline",
+      serverURL: "https://waline-comment.vuejs.press",
+     },
 
     components: {
       components: ["Badge", "VPCard"],
@@ -158,7 +161,7 @@ export default hopeTheme({
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
     // pwa: {
-    //   favicon: "/favicon.ico",
+      //favicon: "/favicon.ico",
     //   cacheHTML: true,
     //   cacheImage: true,
     //   appendBase: true,

@@ -1,5 +1,6 @@
 ---
 cover: /assets/images/R.jpg
+banner: https://sm.ms/image/ZVyi84qINc6G7tL
 icon: pen-to-square
 date: 2024-08-07
 category:

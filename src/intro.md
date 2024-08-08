@@ -4,7 +4,7 @@ portfolio: true
 home: true
 title: 关于我
 icon: circle-info
-avatarAlt: DengBowen
+avatarAlt: 'DengBowen'
 welcome: '👋 Hello, I am'
 
 
