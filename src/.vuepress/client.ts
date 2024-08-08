@@ -12,6 +12,9 @@ import "vuepress-theme-hope/presets/bounce-icon.scss"
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js"
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
 
 export default defineClientConfig({
   setup: () => {
@@ -24,6 +27,11 @@ export default defineClientConfig({
       },
       true,
     );
-     setupSnowFall();
+    setupSnowFall();
+  },
+  enhance({ app }) {
+    // 注册element-plus
+    app.use(ElementPlus)
+  
   },
 });

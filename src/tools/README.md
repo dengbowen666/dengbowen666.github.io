@@ -1,5 +1,5 @@
 ---
-title: 优质工具
+title: 工具
 icon: toolbox
 index: false
 sidebar: false
