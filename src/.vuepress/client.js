@@ -1,6 +1,6 @@
 import { defineClientConfig } from "vuepress/client";
 /*import { setupSnowFall } from "vuepress-theme-hope/presets/setupSnowFall.js";*/
-import "vuepress-theme-hope/presets/left-blog-info.scss"
+//import "vuepress-theme-hope/presets/left-blog-info.scss"
 //: 将博主信息移动至文章列表的左侧。
 
 //为页面图标添加鼠标悬停的跳动效果。
