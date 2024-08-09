@@ -105,6 +105,11 @@ hotReload: true,
       mark: true,
       plantuml: true,
       spoiler: true,
+      sup: true,
+      gfm:true,
+      tabs: true,
+      tasklist: true,
+      
       stylize: [
         {
           matcher: "Recommended",
@@ -119,9 +124,6 @@ hotReload: true,
         },
       ],
       sub: true,
-      sup: true,
-      tabs: true,
-      tasklist: true,
       vPre: true,
 
       // install chart.js before enabling it
