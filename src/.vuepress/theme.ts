@@ -23,8 +23,7 @@ export default hopeTheme({
   blog: {
     medias: {
       BiliBili: "https://space.bilibili.com/446703056?spm_id_from=333.1007.0.0",
-      Email: "mailto:info@example.com",
-      
+      Email: "mailto:2763201730@qq.com",
       GitHub: "https://github.com/dengbowen666/MyVuePressWeb",
       QQ: "https://example.com",
       Steam: "https://example.com",
@@ -34,7 +33,11 @@ export default hopeTheme({
     },
     
   },
-
+navbarLayout: {
+    start: ['Brand'],
+    center: [ 'Links',],
+    end: ['Search', 'Outlook'],
+  },
   locales: {
     "/": {
       // navbar
@@ -48,6 +51,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
+        //avatar: 'https://sm.ms/image/tfEID9gawl6oJPW',
         description: "一个热爱前端的萌新",
         intro: "/intro.html",
         sidebarDisplay:"mobile"
@@ -71,7 +75,7 @@ export default hopeTheme({
   },
 
   // enable it to preview all changes in time
-  // hotReload: true,
+hotReload: true,
 
   plugins: {
     blog: true,
@@ -84,7 +88,7 @@ export default hopeTheme({
      },
 
     components: {
-      components: ["Badge", "VPCard"],
+      components: ["Badge", "VPCard",'BiliBili', 'PDF'],
     },
 
     // These features are enabled for demo, only preserve features you need here

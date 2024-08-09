@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: 主页
-heroImage: /logo.png
+heroImage: 
 heroText: 欢迎来到为拉妮变成狼人模样的个人博客
 tagline: 千里之行，始于足下
 heroFullScreen: true
