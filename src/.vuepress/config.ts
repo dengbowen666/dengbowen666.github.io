@@ -46,6 +46,9 @@ export default defineUserConfig({
       "./components/BlogHero.vue",
     ),
   },*/
+ alias: {
+    '@components': path.resolve(__dirname, 'components')
+  },
 
   plugins: [
     searchProPlugin({

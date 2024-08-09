@@ -12,6 +12,13 @@ import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js"
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 //import BlogHero from './components/BlogHero.vue'
+import { defineAsyncComponent } from 'vue';
+
+const HeroHitokoto = defineAsyncComponent(() => import('./components/HeroHitokoto.vue'));
+const BlogBg = defineAsyncComponent(() => import('./components/BlogBg.vue'));
+const BlogBeautify = defineAsyncComponent(() => import('./components/BlogBeautify.vue'));
+const MyIcon = defineAsyncComponent(() => import('./components/MyIcon.vue'));
+const TopNavBeautify = defineAsyncComponent(() => import('./components/TopNavBeautify.vue'));
 export default defineClientConfig({
   layouts: {
     //BlogHero,
@@ -32,6 +39,13 @@ export default defineClientConfig({
     // 注册element-plus
     app.use(ElementPlus)
     //app.component("BlogHero",BlogHero)
+    app.component('MyIcon', MyIcon);
   },
-  
+   rootComponents: [
+    HeroHitokoto,
+    BlogBeautify,
+     BlogBg,
+    TopNavBeautify
+    // ...
+  ],
 });
