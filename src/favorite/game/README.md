@@ -1,5 +1,5 @@
 ---
-cover: /assets/images/golden_tree.jpg
+cover: /assets/images/page_bg_imgs/golden_tree.jpg
 title: 游戏
 icon: gamepad
 index: false
