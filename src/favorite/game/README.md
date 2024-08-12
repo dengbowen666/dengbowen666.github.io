@@ -4,6 +4,8 @@ title: 游戏
 icon: gamepad
 index: false
 sidebar: false
+star: true
+sticky: true
 category:
   - 导航
 tag: 

@@ -6,7 +6,7 @@ import theme from "./theme.js";
 //自动注册组件
 import registerComponentsPlugin from"@vuepress/plugin-register-components"
 import { hopeTheme } from "vuepress-theme-hope";
-import { commentPlugin } from '@vuepress/plugin-comment'
+
 
 
 const __dirname = getDirname(import.meta.url);
@@ -70,13 +70,13 @@ export default defineUserConfig({
       // 配置项
        componentsDir: path.resolve(__dirname, './components')
     }),
-    commentPlugin({
-      // 选项
-    }),
   ],
    
    head: [
     // ...
+    [
+            'link', { rel: 'icon', href: '/public/logo.png' }
+        ],
 
     // 导入相应链接
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
