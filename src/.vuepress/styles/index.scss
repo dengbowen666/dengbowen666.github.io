@@ -61,3 +61,29 @@ a {
     text-decoration: none;
     color: #d79a9a;
 }
+
+
+.vp-blog-hero-title{
+    background-image: -webkit-linear-gradient(left, #04576b, #05e6d0 25%, #04576b 50%, #05dfe6 75%, #04576b);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: maskedAnimation 4s infinite linear;
+    font-size: 36px;
+}
+
+@keyframes maskedAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+.vp-article-cover :hover{
+  transform: scale(1.5);
+  
+}

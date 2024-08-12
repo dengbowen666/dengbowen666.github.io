@@ -13,7 +13,9 @@ export default hopeTheme({
   },
   favicon:"src/.vuepress/public/favicon.ico",
   iconAssets: "fontawesome-with-brands",
-
+  externalLinkIcon: false,
+  fullscreen: true,
+  
   logo: "/logo.png",
 
   repo: "https://github.com/dengbowen666/MyVuePressWeb",
@@ -31,6 +33,7 @@ export default hopeTheme({
       Youtube: "https://example.com",
       Zhihu: "https://example.com",
     },
+     articlePerPage:5,
     
   },
 navbarLayout: {

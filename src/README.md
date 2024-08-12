@@ -4,8 +4,8 @@ layout: BlogHome
 icon: home
 title: 主页
 heroImage: 
-heroText: 欢迎来到为拉妮变成狼人模样的个人博客
-tagline: 千里之行，始于足下
+heroText: 千里之行，始于足下
+
 heroFullScreen: true
 date: 2024-08-06
 bgImage: https://s2.loli.net/2024/08/07/tFQKyOciMVJSpzf.png
