@@ -26,10 +26,11 @@ projects:
     desc: an awsome blog
     link: https://liukaili.netlify.app/
 
-  - icon: https://theme-hope-assets.vuejs.press/logo.svg
-    name: custom item
-    desc: Detailed description of this custom item
-    link: https://link.to.your.friend
+  - icon: link
+    name: 品优购
+    desc: 纯html+css电商网站页面
+    link: https://dengbowen666.github.io/pinyougou/
+
 
 footer: 为拉妮变成狼人模样
 ---

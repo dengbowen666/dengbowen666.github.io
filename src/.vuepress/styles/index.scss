@@ -40,12 +40,7 @@
     }
 }
 
-// 隐藏首页的内容区域
-.mo7-blog-home {
-    .theme-hope-content {
-        display: none;
-    }
-}
+
 
 // 让内容在更宽的屏幕上可以有更宽的显示区域，嗯，宽屏补丁。
 :root {
@@ -56,4 +51,13 @@
     :root {
         --content-width: calc(100vw - 15rem - 6rem - var(--sidebar-width) - 20rem);
     }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #d79a9a;
 }
