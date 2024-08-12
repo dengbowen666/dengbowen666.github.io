@@ -9,7 +9,6 @@ category:
 tag:
   - 游戏
 star: true
-sticky: true
 ---
 
 

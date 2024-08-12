@@ -12,7 +12,7 @@ export const enNavbar = navbar([
       { text: '时间轴', icon: 'timeline', link: '/timeline/' },
     ],
   },
-  
+  "/posts/",
   "/study/",
   {
     text: '收藏',

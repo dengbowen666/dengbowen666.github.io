@@ -1,6 +1,6 @@
 ---
 title: animation
-category: entertainment
+category: 娱乐
 tag: 动画
 ---
 

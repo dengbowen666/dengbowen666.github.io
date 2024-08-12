@@ -2,12 +2,10 @@
 title: 工具
 icon: toolbox
 index: false
-sidebar: false
+
 category:
   - 导航
-tag:
-  - 工具
-  - 网站
+
   
 ---
 
