@@ -21,5 +21,5 @@ avatar: https://s2.loli.net/2024/08/07/ynvY6hDSGX2zdMs.png
 
 * e-mail：2763201730@qq.com
 * phone: 18282368835
-* wechat:q19292368835
+* wechat:q18282368835
 

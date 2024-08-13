@@ -7,7 +7,7 @@ export default hopeTheme({
   hostname: "https://github.com/dengbowen666/MyVuePressWeb",
 
   author: {
-    name: "Dr.Deng",
+    name: "Hiki",
     url: "https://github.com/dengbowen666/MyVuePressWeb",
     email: " 2763201730@qq.com"
   },

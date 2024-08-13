@@ -12,9 +12,9 @@ bgImage: https://s2.loli.net/2024/08/07/tFQKyOciMVJSpzf.png
 projects:
 
   - icon: link
-    name: 我的github
-    desc: 啥都没有，0star
-    link: https://github.com/dengbowen666
+    name: mySlidev
+    desc: 用Slidev制作并部署在web上的ppt
+    link: https://dengbowen666.github.io/mySlidev/
 
   - icon: book
     name: 逆天邪神
@@ -32,6 +32,6 @@ projects:
     link: https://dengbowen666.github.io/pinyougou/
 
 
-footer: 为拉妮变成狼人模样
+footer: Hiki's blog
 ---
 

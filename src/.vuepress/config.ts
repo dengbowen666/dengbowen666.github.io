@@ -15,8 +15,8 @@ export default defineUserConfig({
   
   locales: {
     "/": {
-      lang: "en-US",
-      title: "Dr.Deng",
+      lang: "zh-CN",
+      title: "Hiki",
       description: "A blog demo for DengBowen",
     },
     /*"/zh/": {

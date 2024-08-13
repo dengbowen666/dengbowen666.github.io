@@ -68,7 +68,7 @@ a {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-background-size: 200% 100%;
-    -webkit-animation: maskedAnimation 4s infinite linear;
+    -webkit-animation: maskedAnimation 1s infinite linear;
     font-size: 36px;
 }
 
@@ -83,7 +83,4 @@ a {
 }
 
 
-.vp-article-cover :hover{
-  transform: scale(1.5);
-  
-}
+
