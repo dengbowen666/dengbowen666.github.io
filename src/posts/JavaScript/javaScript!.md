@@ -1,7 +1,7 @@
 ---
-title:javaScript,启动！
+title: javaScript,启动！
 tag: 
-  -javascript
+ -javascript
 date: 2024-08-13
 
 ---
