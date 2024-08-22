@@ -9,13 +9,13 @@ export default hopeTheme({
   author: {
     name: "Hiki",
     url: "https://github.com/dengbowen666/MyVuePressWeb",
-    email: " 2763201730@qq.com"
+    email: " 2763201730@qq.com",
   },
-  favicon:"src/.vuepress/public/favicon.ico",
+  favicon: "src/.vuepress/public/favicon.ico",
   iconAssets: "fontawesome-with-brands",
   externalLinkIcon: false,
   fullscreen: true,
-  
+
   logo: "/logo.png",
 
   repo: "https://github.com/dengbowen666/MyVuePressWeb",
@@ -33,19 +33,19 @@ export default hopeTheme({
       Youtube: "https://example.com",
       Zhihu: "https://example.com",
     },
-     articlePerPage:5,
-    
+    articlePerPage: 5,
   },
-navbarLayout: {
-    start: ['Brand'],
-    center: [ 'Links',],
-    end: ['Search', 'Outlook'],
+  navbarLayout: {
+    start: ["Brand"],
+    center: ["Links"],
+    end: ["Search", "Outlook"],
   },
   locales: {
     "/": {
+     // rtl: true,
       // navbar
       navbar: enNavbar,
-      navbarAutoHide:"always",
+      navbarAutoHide: "always",
       // sidebar
       sidebar: enSidebar,
 
@@ -57,10 +57,10 @@ navbarLayout: {
         //avatar: 'https://sm.ms/image/tfEID9gawl6oJPW',
         description: "一个热爱前端的萌新",
         intro: "/intro.html",
-        sidebarDisplay:"mobile"
+        sidebarDisplay: "mobile",
       },
 
-   /*   metaLocales: {
+      /*   metaLocales: {
         editLink: "Edit this page on GitHub",
       },*/
     },
@@ -73,16 +73,15 @@ navbarLayout: {
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
-      
     },
   },
 
   // enable it to preview all changes in time
-hotReload: true,
+  hotReload: true,
 
   plugins: {
     blog: {
-      excerptLength: 0
+      excerptLength: 0,
     },
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
@@ -93,7 +92,7 @@ hotReload: true,
     //  },
 
     components: {
-      components: ["Badge", "VPCard",'BiliBili', 'PDF'],
+      components: ["Badge", "VPCard", "BiliBili", "PDF"],
     },
 
     // These features are enabled for demo, only preserve features you need here
@@ -111,10 +110,10 @@ hotReload: true,
       plantuml: true,
       spoiler: true,
       sup: true,
-      gfm:true,
+      gfm: true,
       tabs: true,
       tasklist: true,
-      
+
       stylize: [
         {
           matcher: "Recommended",
@@ -172,7 +171,7 @@ hotReload: true,
 
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
     // pwa: {
-      //favicon: "/favicon.ico",
+    //favicon: "/favicon.ico",
     //   cacheHTML: true,
     //   cacheImage: true,
     //   appendBase: true,
@@ -227,6 +226,4 @@ hotReload: true,
     //   },
     // },
   },
-
-  
 });

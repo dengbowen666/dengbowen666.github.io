@@ -12,12 +12,13 @@ import { hopeTheme } from "vuepress-theme-hope";
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   base: "/MyVuePressWeb/",
-  
+
   locales: {
     "/": {
       lang: "zh-CN",
       title: "Hiki",
       description: "A blog demo for DengBowen",
+      
     },
     /*"/zh/": {
       lang: "zh-CN",
@@ -26,7 +27,7 @@ export default defineUserConfig({
     },*/
   },
 
-   theme,/*: hopeTheme(
+  theme /*: hopeTheme(
     {
       // 主题选项
       // ...
@@ -45,9 +46,9 @@ export default defineUserConfig({
       __dirname,
       "./components/BlogHero.vue",
     ),
-  },*/
- alias: {
-    '@components': path.resolve(__dirname, 'components')
+  },*/,
+  alias: {
+    "@components": path.resolve(__dirname, "components"),
   },
 
   plugins: [
@@ -68,15 +69,13 @@ export default defineUserConfig({
     }),
     registerComponentsPlugin({
       // 配置项
-       componentsDir: path.resolve(__dirname, './components')
+      componentsDir: path.resolve(__dirname, "./components"),
     }),
   ],
-   
-   head: [
+
+  head: [
     // ...
-    [
-            'link', { rel: 'icon', href: '/public/logo.png' }
-        ],
+    ["link", { rel: "icon", href: "/public/logo.png" }],
 
     // 导入相应链接
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
@@ -92,7 +91,6 @@ export default defineUserConfig({
       },
     ],
   ],
- 
 
   // Enable it with pwa
   // shouldPrefetch: false,
