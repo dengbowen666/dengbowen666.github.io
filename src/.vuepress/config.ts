@@ -11,7 +11,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
-  base: "/MyVuePressWeb/",
+  base: "/",
 
   locales: {
     "/": {
