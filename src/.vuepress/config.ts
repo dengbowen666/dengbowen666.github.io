@@ -4,7 +4,6 @@ import { getDirname, path } from "vuepress/utils";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme.js";
 //自动注册组件
-import registerComponentsPlugin from"@vuepress/plugin-register-components"
 import { hopeTheme } from "vuepress-theme-hope";
 
 
@@ -67,10 +66,7 @@ export default defineUserConfig({
         },
       ],
     }),
-    registerComponentsPlugin({
-      // 配置项
-      componentsDir: path.resolve(__dirname, "./components"),
-    }),
+   
   ],
 
   head: [
