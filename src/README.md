@@ -16,10 +16,10 @@ projects:
     desc: 用Slidev制作并部署在web上的ppt
     link: https://dengbowen666.github.io/mySlidev/
 
-  - icon: book
-    name: 逆天邪神
-    desc: 掌天毒之珠，承邪神之血，修逆天之力，一代邪神，君临天下！
-    link: https://www.zongheng.com/detail/408586
+  - icon: link
+    name: vue_blog
+    desc: 练手写的一个前后端分离的博客系统
+    link: https://blog.dbw2004.top
 
   - icon: link
     name: LKaiLi
@@ -27,9 +27,9 @@ projects:
     link: https://liukaili.netlify.app/
 
   - icon: link
-    name: 品优购
-    desc: 纯html+css电商网站页面
-    link: https://dengbowen666.github.io/pinyougou/
+    name: vue_terminal
+    desc: vue3写的模拟终端界面的简历
+    link: https://dengbowen666.github.io/vue_terminal/
 
 
 footer: Hiki's blog
