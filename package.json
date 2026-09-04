@@ -22,6 +22,8 @@
     "vuepress-theme-hope": "2.0.0-rc.107"
   },
   "dependencies": {
+    "@vueuse/core": "^14.4.0",
+    "@vueuse/shared": "^14.4.0",
     "axios": "^1.7.3",
     "echarts": "^6.1.0",
     "element-plus": "^2.7.8",
