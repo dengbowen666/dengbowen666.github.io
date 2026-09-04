@@ -12,20 +12,23 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
-    "@vuepress/plugin-comment": "^2.0.0-rc.40",
-  
+    "@vuepress/bundler-vite": "2.0.0-rc.31",
+    "@vuepress/plugin-comment": "2.0.0-rc.131",
+    "@vuepress/plugin-slimsearch": "^2.0.0-rc.61",
     "@waline/client": "^3.3.0",
-    "vue": "^3.4.31",
-    "vuepress": "2.0.0-rc.14",
-    "vuepress-plugin-search-pro": "^2.0.0-rc.52",
-    "vuepress-theme-hope": "2.0.0-rc.52"
+    "sass-embedded": "^1.103.1",
+    "vue": "^3.5.42",
+    "vuepress": "2.0.0-rc.31",
+    "vuepress-theme-hope": "2.0.0-rc.107"
   },
   "dependencies": {
     "axios": "^1.7.3",
-    "element-plus": "^2.7.8"
+    "echarts": "^6.1.0",
+    "element-plus": "^2.7.8",
+    "markmap-common": "^0.18.9",
+    "markmap-lib": "^0.18.12",
+    "markmap-toolbar": "^0.18.12",
+    "markmap-view": "^0.18.12",
+    "mermaid": "^11.17.2"
   }
-  
-
-  
 }

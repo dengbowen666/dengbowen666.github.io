@@ -1,10 +1,10 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 icon: home
 title: 主页
 heroImage: 
-heroText: 千里之行，始于足下
+heroText:千里之行，始于足下
 
 heroFullScreen: true
 date: 2024-08-06

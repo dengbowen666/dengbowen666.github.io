@@ -1,10 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
-//搜索框
-import { searchProPlugin } from "vuepress-plugin-search-pro";
 import theme from "./theme.js";
-//自动注册组件
-import { hopeTheme } from "vuepress-theme-hope";
 
 
 
@@ -49,25 +45,6 @@ export default defineUserConfig({
   alias: {
     "@components": path.resolve(__dirname, "components"),
   },
-
-  plugins: [
-    searchProPlugin({
-      // 索引全部内容
-      indexContent: true,
-      // 为分类和标签添加索引
-      customFields: [
-        {
-          getter: (page) => page.frontmatter.category as any,
-          formatter: "分类：$content",
-        },
-        {
-          getter: (page) => page.frontmatter.tag as any,
-          formatter: "标签：$content",
-        },
-      ],
-    }),
-   
-  ],
 
   head: [
     // ...
