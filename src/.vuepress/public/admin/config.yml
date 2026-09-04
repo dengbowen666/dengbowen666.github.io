@@ -1,0 +1,104 @@
+backend:
+  name: github
+  repo: dengbowen666/dengbowen666.github.io
+  branch: master
+  # Vercel OAuth Proxy：一次登录长期有效，浏览器自动续 token
+  # base_url 填 Vercel 部署后的域名（Vercel 项目名变化时同步更新此处）
+  base_url: https://decap-oauth-dengbowen.vercel.app
+  auth_endpoint: /api/auth
+
+# 站点域名（用于媒体预览绝对路径）
+site_url: https://dengbowen666.github.io
+# 媒体文件输出目录（public 下 → 部署后 /uploads/*）
+media_folder: "src/.vuepress/public/uploads"
+public_path: "/uploads"
+# Git LFS 不需要；图片提交进仓库
+
+publish_mode: simple
+
+locale: "zh_Hans"
+
+collections:
+  - name: "posts"
+    label: "随笔-博文"
+    folder: "src/posts"
+    create: true
+    path: "{{slug}}/index"
+    editor:
+      preview: false
+    sortable_fields: ["title", "date", "category"]
+    view_filters:
+      - label: "草稿"
+        field: draft
+        pattern: true
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - label: "分类"
+        name: "category"
+        widget: "list"
+        required: false
+      - label: "标签"
+        name: "tag"
+        widget: "list"
+        required: false
+      - { label: "是否草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "是否置顶", name: "sticky", widget: "boolean", default: false, required: false }
+      - { label: "星标", name: "star", widget: "boolean", default: false, required: false }
+      - { label: "封面", name: "cover", widget: "image", required: false }
+      - { label: "摘要", name: "excerpt", widget: "text", required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  - name: "study"
+    label: "前端学习笔记"
+    folder: "src/posts/前端"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "是否草稿", name: "draft", widget: "boolean", default: false, required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  - name: "gallery"
+    label: "展柜-图集"
+    folder: "src/gallery"
+    create: false
+    editor:
+      preview: false
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "正文（组件/图集配置）", name: "body", widget: "markdown" }
+      # 展柜页使用 Vue 组件（GalleryCarousel/GalleryGrid/TimelineGallery），
+      # 结构化编辑复杂度高，默认只提供 markdown/HTML 源码编辑
+
+  - name: "pages"
+    label: "独立页面"
+    files:
+      - name: "intro"
+        label: "关于我"
+        file: "src/intro.md"
+        fields:
+          - { label: "标题", name: "title", widget: "string" }
+          - { label: "头像", name: "avatar", widget: "image", required: false }
+          - { label: "头像 Alt", name: "avatarAlt", widget: "string", required: false }
+          - { label: "欢迎语", name: "welcome", widget: "string", required: false }
+          - { label: "正文", name: "body", widget: "markdown" }
+      - name: "home"
+        label: "主页配置"
+        file: "src/README.md"
+        fields:
+          - { label: "标题", name: "title", widget: "string" }
+          - { label: "Hero 文字（打字机效果）", name: "heroText", widget: "string" }
+          - { label: "背景图", name: "bgImage", widget: "image", required: false }
+          - { label: "页脚", name: "footer", widget: "string", required: false }
+          - label: "项目卡片"
+            name: "projects"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "图标", name: "icon", widget: "string", default: "link" }
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "描述", name: "desc", widget: "string" }
+              - { label: "链接", name: "link", widget: "string" }
