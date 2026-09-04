@@ -3,14 +3,12 @@ home: true
 layout: Blog
 icon: home
 title: 主页
-heroImage: 
-heroText:千里之行，始于足下
-
+heroImage:
+heroText: 千里之行，始于足下
 heroFullScreen: true
 date: 2024-08-06
 bgImage: https://s2.loli.net/2024/08/07/tFQKyOciMVJSpzf.png
 projects:
-
   - icon: link
     name: mySlidev
     desc: 用Slidev制作并部署在web上的ppt
