@@ -1,0 +1,8 @@
+# Vercel 仅托管 Decap OAuth 代理（api/auth.js），
+# 站点本体由 GitHub Pages 部署，因此排除所有无关文件，
+# 将上传体积降到几 KB，避免国内网络上传超时。
+# api/auth.js 为零依赖 CommonJS，无需 package.json / npm install。
+*
+!api
+!api/**
+!vercel.json
