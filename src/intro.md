@@ -1,14 +1,11 @@
 ---
-
 portfolio: true
 home: true
 title: 关于我
 icon: circle-info
-avatarAlt: 'DengBowen'
-welcome: '👋 Hello, I am'
-
-
-avatar: https://s2.loli.net/2024/08/07/ynvY6hDSGX2zdMs.png
+avatar: /src/.vuepress/public/uploads/oip-c.webp
+avatarAlt: DengBowen
+welcome: 👋 Hello, I am
 ---
 
 # Intro Page
