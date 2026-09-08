@@ -35,20 +35,24 @@
             rel="noopener noreferrer"
             :title="m.name"
           >
-            <VPIcon :icon="m.icon" sizing="both" />
+            <component :is="VPIcon" :icon="m.icon" sizing="both" />
           </a>
         </div>
-        <!-- 兜底：无 medias 且有 SocialMedias 全局组件 -->
-        <SocialMedias v-else-if="hasGlobalSocialMedias" />
+        <!-- 兜底：无 medias 且有全局 SocialMedias 组件 -->
+        <component :is="SocialMedias" v-else-if="typeof SocialMedias !== 'string'" />
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { computed, onMounted, onBeforeUnmount, ref, watch } from "vue";
+import { computed, onMounted, onBeforeUnmount, ref, watch, resolveComponent } from "vue";
 import { useFrontmatter, withBase } from "vuepress/client";
 import { useAuthorInfo } from "@theme-hope/composables/useAuthorInfo";
+
+// 用 resolveComponent 拿全局注册的组件（VPIcon 是 theme-hope 全局注册的）
+const VPIcon = resolveComponent("VPIcon");
+const SocialMedias = resolveComponent("SocialMedias");
 
 const authorInfo = useAuthorInfo();
 const frontmatter = useFrontmatter();
@@ -135,12 +139,6 @@ watch(
 
 onMounted(() => startTyping());
 onBeforeUnmount(() => stopTyping());
-
-// 兜底：是否有全局 SocialMedias 组件
-const hasGlobalSocialMedias = computed(() => {
-  // 简单检测：window.VPComponents 里是否注册了 SocialMedias
-  return typeof window !== "undefined" && !!window.VPComponents?.["SocialMedias"];
-});
 </script>
 
 <style lang="scss">
