@@ -3,7 +3,7 @@ portfolio: true
 home: true
 title: 关于我
 icon: circle-info
-avatar: /src/.vuepress/public/uploads/oip-c.webp
+avatar: https://img.pixivdaily.com/tx_bobopic/110503050_bobopic.jpg
 avatarAlt: DengBowen
 welcome: 👋 Hello, I am
 ---
