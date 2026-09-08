@@ -2,9 +2,13 @@ import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
 import theme from "./theme.js";
 
-
-
 const __dirname = getDirname(import.meta.url);
+
+// theme-hope 自己设了 alias: { "@theme-hope": node_modules/.../dist/client }
+// 这导致 defineUserConfig 里的 alias 永远不生效（前缀 alias 先匹配）
+// 覆盖方式：scripts/patch-theme.mjs 在 npm install 后直接修改 theme 的 PortfolioHome.js / PortfolioHero.js
+// 让它们 import 本地自定义版本
+
 export default defineUserConfig({
   base: "/",
 
@@ -13,49 +17,13 @@ export default defineUserConfig({
       lang: "zh-CN",
       title: "Hiki",
       description: "A blog demo for DengBowen",
-      
     },
-    /*"/zh/": {
-      lang: "zh-CN",
-      title: "Mr.Deng的博客",
-      description: "vuepress-theme-hope 的博客演示",
-    },*/
   },
 
-  theme /*: hopeTheme(
-    {
-      // 主题选项
-      // ...
-    },
-    { custom: true },
-  ),
-
- alias: {
-    // 你可以在这里将别名定向到自己的组件
-    // 比如这里我们将主题的主页组件改为用户 .vuepress/components 下的 HomePage.vue
-  //  "@theme-hope/components/HomePage": path.resolve(
-  //     __dirname,
-  //     "./components/HomePage.vue",
-   //   ),
-    "@theme-hope/modules/blog/components/BlogHero": path.resolve(
-      __dirname,
-      "./components/BlogHero.vue",
-    ),
-  },*/,
-  alias: {
-    "@components": path.resolve(__dirname, "components"),
-    // 覆写 theme-hope 的 PortfolioHero（关于我页面的头部英雄区）
-    "@theme-hope/components/home/PortfolioHero": path.resolve(
-      __dirname,
-      "./components/PortfolioHero.vue",
-    ),
-  },
+  theme,
 
   head: [
-    // ...
     ["link", { rel: "icon", href: "/public/logo.png" }],
-
-    // 导入相应链接
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     [
       "link",
@@ -69,7 +37,4 @@ export default defineUserConfig({
       },
     ],
   ],
-
-  // Enable it with pwa
-  // shouldPrefetch: false,
 });

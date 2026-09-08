@@ -6,6 +6,9 @@ import { defineClientConfig } from "vuepress/client";
 //为页面图标添加鼠标悬停的跳动效果。
 import "vuepress-theme-hope/presets/bounce-icon.scss"
 
+// 自定义关于我页面样式（覆盖 theme-hope PortfolioHero 默认样式）
+import "./styles/portfolio-override.scss"
+
 import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 import { setupSnowFall } from "vuepress-theme-hope/presets/snowFall.js"

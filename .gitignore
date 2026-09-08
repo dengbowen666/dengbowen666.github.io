@@ -5,3 +5,5 @@ src/.vuepress/.temp/
 src/.vuepress/dist/
 .vercel
 .env*
+# theme patch 备份
+node_modules/vuepress-theme-hope/dist/client/components/home/*.bak

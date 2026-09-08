@@ -1,0 +1,224 @@
+/* 自定义关于我页面样式：覆盖 theme-hope 的 PortfolioHero 默认样式 */
+/* 从 client.js 导入，确保无论 Vite 怎么处理组件 CSS 都能被加载 */
+
+/* ===== 整体 hero 区 ===== */
+.vp-portfolio {
+  min-height: 420px !important;
+  padding: 3rem 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  flex-flow: row nowrap !important;
+  background: transparent !important;
+
+  @media (max-width: 720px) {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+    padding: 2rem 1rem !important;
+  }
+}
+
+/* ===== 背景遮罩 ===== */
+.vp-portfolio-mask {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  opacity: 0.35 !important;
+  filter: blur(2px) !important;
+}
+
+/* ===== 中间容器（左右布局） ===== */
+.vp-portfolio-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1100px;
+  width: 100%;
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+/* ===== 头像区 ===== */
+.vp-portfolio-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.vp-portfolio-avatar-frame {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 4px rgba(var(--theme-color), 0.25),
+    0 12px 40px rgba(0, 0, 0, 0.25);
+  background: rgba(var(--theme-color), 0.08);
+
+  @media (max-width: 720px) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.vp-portfolio-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0 !important; /* 覆盖 theme 的 border-radius: 10px */
+}
+
+.vp-portfolio-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(var(--theme-color), 0.6);
+}
+
+/* ===== 装饰光斑 ===== */
+.vp-portfolio-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: portfolio-float 6s ease-in-out infinite;
+}
+
+.vp-portfolio-glow-a {
+  width: 80px;
+  height: 80px;
+  background: rgba(var(--theme-color), 0.3);
+  top: -10px;
+  right: -10px;
+  animation-delay: 0s;
+}
+
+.vp-portfolio-glow-b {
+  width: 60px;
+  height: 60px;
+  background: rgba(var(--theme-color), 0.2);
+  bottom: -10px;
+  left: -10px;
+  animation-delay: 3s;
+}
+
+@keyframes portfolio-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== 文本区 ===== */
+.vp-portfolio-info {
+  flex: 1 !important;
+  min-width: 0;
+  max-width: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  text-align: left !important;
+
+  @media (max-width: 720px) {
+    text-align: center !important;
+  }
+}
+
+.vp-portfolio-welcome {
+  font-size: 1.05rem !important;
+  margin: 0 0 0.25rem 0 !important;
+  color: rgba(var(--theme-text-color), 0.65) !important;
+  letter-spacing: 0.02em !important;
+}
+
+.vp-portfolio-name {
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+  font-weight: 700 !important;
+  margin: 0 0 0.5rem 0 !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(
+    135deg,
+    rgb(var(--theme-color)) 0%,
+    rgba(var(--theme-color), 0.7) 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  border-bottom: none !important;
+
+  /* 覆盖 theme 的 title:after 伪元素 */
+  &:after {
+    display: none !important;
+  }
+}
+
+.vp-portfolio-title {
+  font-size: clamp(1rem, 2.5vw, 1.35rem) !important;
+  font-weight: 500 !important;
+  margin: 0 0 1.5rem 0 !important;
+  color: rgba(var(--theme-text-color), 0.75) !important;
+  min-height: 1.6em !important;
+  border-right: 2px solid rgb(var(--theme-color)) !important;
+  padding-right: 0.5rem !important;
+  border-bottom: none !important;
+  animation: portfolio-blink 1s step-end infinite;
+
+  /* 覆盖 theme 的 title:after 伪元素（光标） */
+  &:after {
+    display: none !important;
+  }
+}
+
+@keyframes portfolio-blink {
+  50% { border-color: transparent; }
+}
+
+/* ===== 社交图标 ===== */
+.vp-portfolio-medias {
+  display: flex !important;
+  gap: 0.6rem !important;
+  flex-wrap: wrap !important;
+  padding-top: 0 !important;
+  justify-content: flex-start !important;
+
+  @media (max-width: 720px) {
+    justify-content: center !important;
+  }
+}
+
+.vp-portfolio-media {
+  width: 40px !important;
+  height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: rgba(var(--theme-color), 0.08) !important;
+  color: rgba(var(--theme-text-color), 0.7) !important;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease !important;
+
+  &:hover {
+    transform: translateY(-3px) !important;
+    background: rgba(var(--theme-color), 0.18) !important;
+    color: rgb(var(--theme-color)) !important;
+  }
+
+  /* 覆盖 theme 的 :after tooltip */
+  &:after {
+    display: none !important;
+  }
+}
