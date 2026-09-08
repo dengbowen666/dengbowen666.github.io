@@ -155,6 +155,20 @@ collections:
           - { label: "头像", name: "avatar", widget: "image", required: false }
           - { label: "头像 Alt", name: "avatarAlt", widget: "string", required: false }
           - { label: "欢迎语", name: "welcome", widget: "string", required: false }
+          - label: "打字机标题（留空则不显示）"
+            name: "titles"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "标题文本", name: "title", widget: "string" }
+          - label: "社交图标"
+            name: "medias"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "名称（GitHub / Email ...）", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "图标（FontAwesome 名，如 github / envelope）", name: "icon", widget: "string" }
           - { label: "正文", name: "body", widget: "markdown" }
       - name: "home"
         label: "主页配置"

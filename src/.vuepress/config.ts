@@ -44,6 +44,11 @@ export default defineUserConfig({
   },*/,
   alias: {
     "@components": path.resolve(__dirname, "components"),
+    // 覆写 theme-hope 的 PortfolioHero（关于我页面的头部英雄区）
+    "@theme-hope/components/home/PortfolioHero": path.resolve(
+      __dirname,
+      "./components/PortfolioHero.vue",
+    ),
   },
 
   head: [
