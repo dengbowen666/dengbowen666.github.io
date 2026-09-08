@@ -17,7 +17,7 @@ publish_mode: simple
 
 locale: "zh_Hans"
 
-# 通用：博文 / 笔记类字段（展柜、收藏等正文含 Vue 组件的集合单独定义）
+# 通用：博文 / 笔记类字段（图集等正文含 Vue 组件的集合单独定义）
 _article_fields: &article_fields
   - { label: "标题", name: "title", widget: "string" }
   - { label: "发布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
@@ -36,13 +36,21 @@ _article_fields: &article_fields
   - { label: "星标", name: "star", widget: "boolean", default: false, required: false }
   - { label: "正文", name: "body", widget: "markdown" }
 
+# 集合与顶部菜单一一对应：
+#   记录（随笔根文章 + 前端/css/vue/... 整棵树）
+#   展柜（cosplay / travel）
+#   收藏（game / movies / music / photos / tools）
+#   关于我·更新日志（changelog）
+#   独立页面（关于我 intro.md、主页 README.md）
 collections:
-  # ===== 记录 · 随笔博文（src/posts 根目录，不含“前端”专区）=====
+  # ===== 记录（对应菜单「记录」：随笔 + 前端子树）=====
   - name: "posts"
-    label: "记录·随笔"
+    label: "记录"
     folder: "src/posts"
     create: true
-    # 不开 nested：folder 集合默认只列根目录文章，自然排除“前端”子目录（由 study 集合管理）
+    # 嵌套展示整棵目录树：随笔根文章、前端/css、前端/vue、前端/JavaScript ...
+    nested:
+      depth: 4
     editor:
       preview: false
     sortable_fields: ["title", "date"]
@@ -52,25 +60,11 @@ collections:
         pattern: true
     fields: *article_fields
 
-  # ===== 记录 · 前端学习笔记（含 css / vue / JavaScript 子目录）=====
-  - name: "study"
-    label: "前端学习笔记"
-    folder: "src/posts/前端"
-    create: true
-    # 递归子目录，可在 css / vue / JavaScript 里新建笔记
-    nested:
-      depth: 3
-    editor:
-      preview: false
-    sortable_fields: ["title", "date"]
-    fields: *article_fields
-
-  # ===== 展柜 · 图集（cosplay / travel，正文为 GalleryCarousel / GalleryGrid 组件）=====
+  # ===== 展柜（对应菜单「展柜」：cosplay / travel，正文为图集组件）=====
   - name: "gallery"
-    label: "展柜·图集"
+    label: "展柜"
     folder: "src/gallery"
     create: true
-    # 递归 cosplay / travel 子目录，新建时可选择放入哪个图集分类
     nested:
       depth: 3
     editor:
@@ -113,7 +107,7 @@ collections:
           ]' />
           -->
 
-  # ===== 收藏（game / movies / music / photos）=====
+  # ===== 收藏（对应菜单「收藏」：game / movies / music / photos / tools）=====
   - name: "favorite"
     label: "收藏"
     folder: "src/favorite"
@@ -127,28 +121,15 @@ collections:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "图标（FontAwesome 名）", name: "icon", widget: "string", required: false }
       - { label: "分类", name: "category", widget: "string", required: false }
-      - { label: "正文（Markdown / 组件）", name: "body", widget: "markdown" }
-
-  # ===== 工具（网站推荐 / 常用文档）=====
-  - name: "tools"
-    label: "工具收藏"
-    folder: "src/tools"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "图标（FontAwesome 名，如 link / book）", name: "icon", widget: "string", required: false }
-      - { label: "分类（如：导航）", name: "category", widget: "string", required: false }
       - label: "标签"
         name: "tag"
         widget: "list"
         required: false
-      - { label: "正文", name: "body", widget: "markdown" }
+      - { label: "正文（Markdown / 组件）", name: "body", widget: "markdown" }
 
-  # ===== 更新日志 =====
+  # ===== 关于我 · 更新日志（对应菜单「关于我 → 更新日志」）=====
   - name: "changelog"
-    label: "更新日志"
+    label: "关于我·更新日志"
     folder: "src/changelog"
     create: true
     editor:

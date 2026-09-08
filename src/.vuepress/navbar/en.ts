@@ -40,7 +40,7 @@ export const enNavbar = navbar([
       '/favorite/movies/',
       '/favorite/music/',
       '/favorite/photos/',
-      '/tools/',
+      '/favorite/tools/',
     ],
   },
   {

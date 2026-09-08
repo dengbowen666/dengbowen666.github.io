@@ -11,6 +11,6 @@ export const enSidebar = sidebar({
   "/posts/": "structure",
   "/posts/前端/": "structure",
 
-  "/tools/": "structure",
+  "/favorite/tools/": "structure",
   "/changelog/": "structure",
 });
