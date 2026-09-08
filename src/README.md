@@ -1,6 +1,6 @@
 ---
 heroImage: null
-heroText: 千里之行，始于
+heroText: 千里之行，始于足下
 layout: Blog
 date: 2024-08-06
 heroFullScreen: true
