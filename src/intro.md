@@ -9,7 +9,7 @@ avatar: https://img.pixivdaily.com/tx_bobopic/110503050_bobopic.jpg
 avatarAlt: DengBowen
 
 # 欢迎语 & 打字机标题（titles 留空则不显示打字机）
-welcome: 👋 Hello, I am
+welcome: 👋 Hello, I am Hiki
 titles:
   - '热爱前端的萌新'
   - '在学习的大三学生'
@@ -28,7 +28,7 @@ medias:
 
 大三，努力学习前端中~
 
-<typed :typedList="['自在，轻盈，我本不想停留','烦烦',]"/>
+
 
 * e-mail：2763201730@qq.com
 * phone: 18282368835
